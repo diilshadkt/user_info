@@ -9,7 +9,11 @@ class HomePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('API Details'),
+          backgroundColor: Colors.deepOrangeAccent,
+          title: const Text(
+            'User tap',
+            style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white),
+          ),
           centerTitle: true,
           actions: [
             Icon(Icons.home),
@@ -52,7 +56,8 @@ class HomePage extends ConsumerWidget {
                                             MainAxisAlignment.spaceEvenly,
                                         children: [
                                           CircleAvatar(
-                                              backgroundColor: Colors.amber,
+                                              backgroundColor:
+                                                  Colors.deepOrangeAccent,
                                               child: Text(
                                                   data[index].id.toString())),
                                           const SizedBox(
@@ -64,7 +69,8 @@ class HomePage extends ConsumerWidget {
                                               data[index].title,
                                               style: const TextStyle(
                                                   fontWeight: FontWeight.bold,
-                                                  color: Colors.amber),
+                                                  color:
+                                                      Colors.deepOrangeAccent),
                                             ),
                                           ),
                                         ],
