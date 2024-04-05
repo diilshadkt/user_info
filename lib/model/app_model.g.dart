@@ -8,10 +8,10 @@ part of 'app_model.dart';
 
 _$AppModelImpl _$$AppModelImplFromJson(Map<String, dynamic> json) =>
     _$AppModelImpl(
-      userId: json['userId'] as String,
-      id: json['id'] as String,
+      userId: json['userId'] as int,
+      id: json['id'] as int,
       title: json['title'] as String,
-      description: json['description'] as String,
+      body: json['body'] as String,
     );
 
 Map<String, dynamic> _$$AppModelImplToJson(_$AppModelImpl instance) =>
@@ -19,5 +19,5 @@ Map<String, dynamic> _$$AppModelImplToJson(_$AppModelImpl instance) =>
       'userId': instance.userId,
       'id': instance.id,
       'title': instance.title,
-      'description': instance.description,
+      'body': instance.body,
     };

@@ -20,10 +20,10 @@ AppModel _$AppModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AppModel {
-  String get userId => throw _privateConstructorUsedError;
-  String get id => throw _privateConstructorUsedError;
+  int get userId => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
+  String get body => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +36,7 @@ abstract class $AppModelCopyWith<$Res> {
   factory $AppModelCopyWith(AppModel value, $Res Function(AppModel) then) =
       _$AppModelCopyWithImpl<$Res, AppModel>;
   @useResult
-  $Res call({String userId, String id, String title, String description});
+  $Res call({int userId, int id, String title, String body});
 }
 
 /// @nodoc
@@ -55,24 +55,24 @@ class _$AppModelCopyWithImpl<$Res, $Val extends AppModel>
     Object? userId = null,
     Object? id = null,
     Object? title = null,
-    Object? description = null,
+    Object? body = null,
   }) {
     return _then(_value.copyWith(
       userId: null == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
+      body: null == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -86,7 +86,7 @@ abstract class _$$AppModelImplCopyWith<$Res>
       __$$AppModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String userId, String id, String title, String description});
+  $Res call({int userId, int id, String title, String body});
 }
 
 /// @nodoc
@@ -103,24 +103,24 @@ class __$$AppModelImplCopyWithImpl<$Res>
     Object? userId = null,
     Object? id = null,
     Object? title = null,
-    Object? description = null,
+    Object? body = null,
   }) {
     return _then(_$AppModelImpl(
       userId: null == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
+      body: null == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -133,23 +133,23 @@ class _$AppModelImpl implements _AppModel {
       {required this.userId,
       required this.id,
       required this.title,
-      required this.description});
+      required this.body});
 
   factory _$AppModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$AppModelImplFromJson(json);
 
   @override
-  final String userId;
+  final int userId;
   @override
-  final String id;
+  final int id;
   @override
   final String title;
   @override
-  final String description;
+  final String body;
 
   @override
   String toString() {
-    return 'AppModel(userId: $userId, id: $id, title: $title, description: $description)';
+    return 'AppModel(userId: $userId, id: $id, title: $title, body: $body)';
   }
 
   @override
@@ -160,13 +160,12 @@ class _$AppModelImpl implements _AppModel {
             (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.description, description) ||
-                other.description == description));
+            (identical(other.body, body) || other.body == body));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, userId, id, title, description);
+  int get hashCode => Object.hash(runtimeType, userId, id, title, body);
 
   @JsonKey(ignore: true)
   @override
@@ -184,22 +183,22 @@ class _$AppModelImpl implements _AppModel {
 
 abstract class _AppModel implements AppModel {
   factory _AppModel(
-      {required final String userId,
-      required final String id,
+      {required final int userId,
+      required final int id,
       required final String title,
-      required final String description}) = _$AppModelImpl;
+      required final String body}) = _$AppModelImpl;
 
   factory _AppModel.fromJson(Map<String, dynamic> json) =
       _$AppModelImpl.fromJson;
 
   @override
-  String get userId;
+  int get userId;
   @override
-  String get id;
+  int get id;
   @override
   String get title;
   @override
-  String get description;
+  String get body;
   @override
   @JsonKey(ignore: true)
   _$$AppModelImplCopyWith<_$AppModelImpl> get copyWith =>
